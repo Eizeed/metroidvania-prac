@@ -3,6 +3,7 @@ use godot::prelude::*;
 mod level;
 mod player;
 mod enemy;
+mod game_manager;
 
 struct Metroidvania;
 
