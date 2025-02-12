@@ -1,0 +1,16 @@
+use godot::prelude::*;
+
+#[derive(GodotClass)]
+#[class(base=Node2D)]
+struct Level {
+    base: Base<Node2D>
+}
+
+#[godot_api]
+impl INode2D for Level {
+    fn init(base: Base<Self::Base>) -> Self {
+        Self {
+            base
+        }
+    }
+}
