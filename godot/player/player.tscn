@@ -172,7 +172,7 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dkye7"]
 radius = 6.0
-height = 36.0
+height = 38.0
 
 [node name="Player" type="Player"]
 collision_layer = 2
@@ -180,9 +180,8 @@ collision_layer = 2
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -24)
 sprite_frames = SubResource("SpriteFrames_vyvut")
-animation = &"fall"
+animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.377003
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, -19)

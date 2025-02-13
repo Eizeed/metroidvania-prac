@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="metroidvania"
-run/main_scene="res://levels/test_levels/test_level.tscn"
+run/main_scene="res://levels/level_1.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+GlobalGameManager="*res://game_manager/game_manager.tscn"
 
 [display]
 
