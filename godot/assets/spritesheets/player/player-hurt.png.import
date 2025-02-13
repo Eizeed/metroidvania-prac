@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dm3pq1qroejlo"
-path="res://.godot/imported/player-hurt.png-bf9fff446d04868a70b4653f60dada20.ctex"
+path="res://.godot/imported/player-hurt.png-4e97f5980fdb68c1d15af7f0616ef32a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Packs/warped-Caves/PNG/spritesheets/player/player-hurt.png"
-dest_files=["res://.godot/imported/player-hurt.png-bf9fff446d04868a70b4653f60dada20.ctex"]
+source_file="res://assets/spritesheets/player/player-hurt.png"
+dest_files=["res://.godot/imported/player-hurt.png-4e97f5980fdb68c1d15af7f0616ef32a.ctex"]
 
 [params]
 

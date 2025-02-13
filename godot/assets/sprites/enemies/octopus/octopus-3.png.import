@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dy6rd2ulgks54"
-path="res://.godot/imported/octopus-3.png-e4c45e8d5c231e08f1f62b5919567371.ctex"
+path="res://.godot/imported/octopus-3.png-fbe478648aad93f9226e358e92743a3e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Packs/warped-Caves/PNG/sprites/enemies/octopus/octopus-3.png"
-dest_files=["res://.godot/imported/octopus-3.png-e4c45e8d5c231e08f1f62b5919567371.ctex"]
+source_file="res://assets/sprites/enemies/octopus/octopus-3.png"
+dest_files=["res://.godot/imported/octopus-3.png-fbe478648aad93f9226e358e92743a3e.ctex"]
 
 [params]
 

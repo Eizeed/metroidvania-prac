@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cvxfs5kelfhoy"
-path="res://.godot/imported/jumper-jump.png-1fd2787356c84d5a9a72bddc9dfbb6a6.ctex"
+path="res://.godot/imported/jumper-jump.png-5387254b849f3ad80970f2e5c5d76f61.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Packs/warped-Caves/PNG/spritesheets/enemies/jumper-jump.png"
-dest_files=["res://.godot/imported/jumper-jump.png-1fd2787356c84d5a9a72bddc9dfbb6a6.ctex"]
+source_file="res://assets/spritesheets/enemies/jumper-jump.png"
+dest_files=["res://.godot/imported/jumper-jump.png-5387254b849f3ad80970f2e5c5d76f61.ctex"]
 
 [params]
 

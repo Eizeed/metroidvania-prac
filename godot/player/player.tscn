@@ -1,8 +1,9 @@
-[gd_scene load_steps=26 format=3 uid="uid://c5cx2xxpmot6q"]
+[gd_scene load_steps=37 format=3 uid="uid://c5cx2xxpmot6q"]
 
-[ext_resource type="Texture2D" uid="uid://cx83ky7v5pu1x" path="res://assets/Packs/warped-Caves/PNG/spritesheets/player/player-idle.png" id="1_wyrht"]
-[ext_resource type="Texture2D" uid="uid://crsskyn155puf" path="res://assets/Packs/warped-Caves/PNG/spritesheets/player/player-jump.png" id="2_1yewk"]
-[ext_resource type="Texture2D" uid="uid://dkwb1nabx3wha" path="res://assets/Packs/warped-Caves/PNG/spritesheets/player/player-run.png" id="2_hj0es"]
+[ext_resource type="Texture2D" uid="uid://cx83ky7v5pu1x" path="res://assets/spritesheets/player/player-idle.png" id="1_wyrht"]
+[ext_resource type="Texture2D" uid="uid://crsskyn155puf" path="res://assets/spritesheets/player/player-jump.png" id="2_1yewk"]
+[ext_resource type="Texture2D" uid="uid://dkwb1nabx3wha" path="res://assets/spritesheets/player/player-run.png" id="2_hj0es"]
+[ext_resource type="Texture2D" uid="uid://bs6x85i7xp1ib" path="res://assets/spritesheets/player/player-run-shoot.png" id="4_vmupj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y76qj"]
 atlas = ExtResource("2_1yewk")
@@ -82,6 +83,46 @@ region = Rect2(640, 0, 80, 80)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n1af6"]
 atlas = ExtResource("2_hj0es")
+region = Rect2(720, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rmpqk"]
+atlas = ExtResource("4_vmupj")
+region = Rect2(0, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2arnm"]
+atlas = ExtResource("4_vmupj")
+region = Rect2(80, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_06ly3"]
+atlas = ExtResource("4_vmupj")
+region = Rect2(160, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qetch"]
+atlas = ExtResource("4_vmupj")
+region = Rect2(240, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jorbs"]
+atlas = ExtResource("4_vmupj")
+region = Rect2(320, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nem7d"]
+atlas = ExtResource("4_vmupj")
+region = Rect2(400, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yhgpm"]
+atlas = ExtResource("4_vmupj")
+region = Rect2(480, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_15cdt"]
+atlas = ExtResource("4_vmupj")
+region = Rect2(560, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r8ndg"]
+atlas = ExtResource("4_vmupj")
+region = Rect2(640, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bgxvo"]
+atlas = ExtResource("4_vmupj")
 region = Rect2(720, 0, 80, 80)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vyvut"]
@@ -168,6 +209,46 @@ animations = [{
 "loop": true,
 "name": &"run",
 "speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rmpqk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2arnm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_06ly3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qetch")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jorbs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nem7d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yhgpm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_15cdt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r8ndg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bgxvo")
+}],
+"loop": true,
+"name": &"run_shoot",
+"speed": 12.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"shoot",
+"speed": 5.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dkye7"]
@@ -180,9 +261,13 @@ collision_layer = 2
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -24)
 sprite_frames = SubResource("SpriteFrames_vyvut")
-animation = &"idle"
+animation = &"run_shoot"
 autoplay = "idle"
+frame_progress = 0.651785
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, -19)
 shape = SubResource("CapsuleShape2D_dkye7")
+
+[node name="Muzzle" type="Marker2D" parent="."]
+position = Vector2(18, -26)

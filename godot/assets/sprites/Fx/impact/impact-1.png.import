@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bm66vyi6q62hg"
-path="res://.godot/imported/impact-1.png-98ac8c81935dd51b7f3f14715c1f07ab.ctex"
+path="res://.godot/imported/impact-1.png-576a32cab6e7763c822ecbc79f6dc9bc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Packs/warped-Caves/PNG/sprites/Fx/impact/impact-1.png"
-dest_files=["res://.godot/imported/impact-1.png-98ac8c81935dd51b7f3f14715c1f07ab.ctex"]
+source_file="res://assets/sprites/Fx/impact/impact-1.png"
+dest_files=["res://.godot/imported/impact-1.png-576a32cab6e7763c822ecbc79f6dc9bc.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cx83ky7v5pu1x"
-path="res://.godot/imported/player-idle.png-f454d2cac6e8eab07228ca072d5184c5.ctex"
+path="res://.godot/imported/player-idle.png-3252720fb4312611c6e075b853d92fb7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Packs/warped-Caves/PNG/spritesheets/player/player-idle.png"
-dest_files=["res://.godot/imported/player-idle.png-f454d2cac6e8eab07228ca072d5184c5.ctex"]
+source_file="res://assets/spritesheets/player/player-idle.png"
+dest_files=["res://.godot/imported/player-idle.png-3252720fb4312611c6e075b853d92fb7.ctex"]
 
 [params]
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dtugvyhmn0acu"]
 
-[ext_resource type="Texture2D" uid="uid://bbmjseo402n0i" path="res://assets/Packs/warped-Caves/PNG/environment/layers/background.png" id="1_lsll5"]
-[ext_resource type="Texture2D" uid="uid://b4xtb8epuv8v5" path="res://assets/Packs/warped-Caves/PNG/environment/layers/middleground.png" id="2_iiduv"]
+[ext_resource type="Texture2D" uid="uid://bbmjseo402n0i" path="res://assets/environment/layers/background.png" id="1_lsll5"]
+[ext_resource type="Texture2D" uid="uid://b4xtb8epuv8v5" path="res://assets/environment/layers/middleground.png" id="2_iiduv"]
 
 [node name="ParallaxBackground" type="ParallaxBackground"]
 

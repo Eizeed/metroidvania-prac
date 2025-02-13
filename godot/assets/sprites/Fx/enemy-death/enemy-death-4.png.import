@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cl03mrav661f8"
-path="res://.godot/imported/enemy-death-4.png-70e1673c94bad6f943b285b9f52eeb5b.ctex"
+path="res://.godot/imported/enemy-death-4.png-e30af7aa5ac7aef426224ee43f326b72.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Packs/warped-Caves/PNG/sprites/Fx/enemy-death/enemy-death-4.png"
-dest_files=["res://.godot/imported/enemy-death-4.png-70e1673c94bad6f943b285b9f52eeb5b.ctex"]
+source_file="res://assets/sprites/Fx/enemy-death/enemy-death-4.png"
+dest_files=["res://.godot/imported/enemy-death-4.png-e30af7aa5ac7aef426224ee43f326b72.ctex"]
 
 [params]
 

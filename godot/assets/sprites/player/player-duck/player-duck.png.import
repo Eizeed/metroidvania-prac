@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bcon05raj677d"
-path="res://.godot/imported/player-duck.png-6ca2f4561ba746d385b11b4abd687a8a.ctex"
+path="res://.godot/imported/player-duck.png-b0d7f32834b35c1e4ac27b3a14e816ea.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Packs/warped-Caves/PNG/sprites/player/player-duck/player-duck.png"
-dest_files=["res://.godot/imported/player-duck.png-6ca2f4561ba746d385b11b4abd687a8a.ctex"]
+source_file="res://assets/sprites/player/player-duck/player-duck.png"
+dest_files=["res://.godot/imported/player-duck.png-b0d7f32834b35c1e4ac27b3a14e816ea.ctex"]
 
 [params]
 

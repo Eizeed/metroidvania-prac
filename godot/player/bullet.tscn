@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://48ajgn861e35"]
+
+[ext_resource type="Texture2D" uid="uid://doxj008in83l3" path="res://assets/spritesheets/Fx/shot.png" id="1_vpjvt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lvfnk"]
+atlas = ExtResource("1_vpjvt")
+region = Rect2(0, 0, 6, 4)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_upo0k"]
+atlas = ExtResource("1_vpjvt")
+region = Rect2(6, 0, 6, 4)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7mho4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lvfnk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_upo0k")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="Bullet" type="Bullet"]
+sprite_frames = SubResource("SpriteFrames_7mho4")
+frame_progress = 0.931493
+centered = false
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="on_timer_timeout"]

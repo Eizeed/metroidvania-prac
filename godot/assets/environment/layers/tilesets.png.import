@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d3t0ejidyuwy3"
-path="res://.godot/imported/tilesets.png-ac37299b9b557af574fc414ea981609f.ctex"
+path="res://.godot/imported/tilesets.png-ce822306d642dad15a5ef845c1a88b6e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Packs/warped-Caves/PNG/environment/layers/tilesets.png"
-dest_files=["res://.godot/imported/tilesets.png-ac37299b9b557af574fc414ea981609f.ctex"]
+source_file="res://assets/environment/layers/tilesets.png"
+dest_files=["res://.godot/imported/tilesets.png-ce822306d642dad15a5ef845c1a88b6e.ctex"]
 
 [params]
 

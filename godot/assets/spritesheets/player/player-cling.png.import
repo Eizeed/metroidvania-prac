@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cjm4ukrkvo2hd"
-path="res://.godot/imported/player-cling.png-7558d77955cebbf5148846f6a685cbb7.ctex"
+path="res://.godot/imported/player-cling.png-329089c522c7915ad1a37747bf16a740.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Packs/warped-Caves/PNG/spritesheets/player/player-cling.png"
-dest_files=["res://.godot/imported/player-cling.png-7558d77955cebbf5148846f6a685cbb7.ctex"]
+source_file="res://assets/spritesheets/player/player-cling.png"
+dest_files=["res://.godot/imported/player-cling.png-329089c522c7915ad1a37747bf16a740.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bcrchs2alrj8q"
-path="res://.godot/imported/crab-walk.png-a0bd51294763a69e206d2cc7b8a80b67.ctex"
+path="res://.godot/imported/crab-walk.png-374cc6dc46363e6b4a053406196cc83d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Packs/warped-Caves/PNG/spritesheets/enemies/crab-walk.png"
-dest_files=["res://.godot/imported/crab-walk.png-a0bd51294763a69e206d2cc7b8a80b67.ctex"]
+source_file="res://assets/spritesheets/enemies/crab-walk.png"
+dest_files=["res://.godot/imported/crab-walk.png-374cc6dc46363e6b4a053406196cc83d.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://51noqxg3x8yd"
-path="res://.godot/imported/environment-preview.png-a38dde382b0b6b5804b1ea96c0728bdd.ctex"
+path="res://.godot/imported/environment-preview.png-32159c08a08fcf9c2ba9f2a9e29fc412.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Packs/warped-Caves/PNG/environment/environment-preview.png"
-dest_files=["res://.godot/imported/environment-preview.png-a38dde382b0b6b5804b1ea96c0728bdd.ctex"]
+source_file="res://assets/environment/environment-preview.png"
+dest_files=["res://.godot/imported/environment-preview.png-32159c08a08fcf9c2ba9f2a9e29fc412.ctex"]
 
 [params]
 

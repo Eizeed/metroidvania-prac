@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://fwc3mlvg805r"
-path="res://.godot/imported/power-up-2.png-ead6eb41ee134af5a070101e9f5e3f08.ctex"
+path="res://.godot/imported/power-up-2.png-aca7dceecaebb4ae44f09f58cb2daa07.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Packs/warped-Caves/PNG/sprites/Fx/power-up/power-up-2.png"
-dest_files=["res://.godot/imported/power-up-2.png-ead6eb41ee134af5a070101e9f5e3f08.ctex"]
+source_file="res://assets/sprites/Fx/power-up/power-up-2.png"
+dest_files=["res://.godot/imported/power-up-2.png-aca7dceecaebb4ae44f09f58cb2daa07.ctex"]
 
 [params]
 

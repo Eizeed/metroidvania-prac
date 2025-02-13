@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c1o6s4t0lxrl7"
-path="res://.godot/imported/player-jump-5.png-ee0eb47c49d0748aaf354852e19b977f.ctex"
+path="res://.godot/imported/player-jump-5.png-366e03df5825605738ecefde7aa7485f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Packs/warped-Caves/PNG/sprites/player/player-jump/player-jump-5.png"
-dest_files=["res://.godot/imported/player-jump-5.png-ee0eb47c49d0748aaf354852e19b977f.ctex"]
+source_file="res://assets/sprites/player/player-jump/player-jump-5.png"
+dest_files=["res://.godot/imported/player-jump-5.png-366e03df5825605738ecefde7aa7485f.ctex"]
 
 [params]
 

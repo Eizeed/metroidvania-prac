@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://djl5vupvrmbje"
-path="res://.godot/imported/crab-idle-1.png-2f4a1b38073e90374ea89d1573c97d2c.ctex"
+path="res://.godot/imported/crab-idle-1.png-6a574e1e73bf392cdb6651e48bddd60f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Packs/warped-Caves/PNG/sprites/enemies/crab-idle/crab-idle-1.png"
-dest_files=["res://.godot/imported/crab-idle-1.png-2f4a1b38073e90374ea89d1573c97d2c.ctex"]
+source_file="res://assets/sprites/enemies/crab-idle/crab-idle-1.png"
+dest_files=["res://.godot/imported/crab-idle-1.png-6a574e1e73bf392cdb6651e48bddd60f.ctex"]
 
 [params]
 

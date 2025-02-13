@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dseenq3fe1b7i"
-path="res://.godot/imported/plant-small.png-cce923198f14bb652cf060a5c6d1a2d8.ctex"
+path="res://.godot/imported/plant-small.png-4b5e3c5ee9c8d7f7a137ac9b97834331.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Packs/warped-Caves/PNG/environment/props/plant-small.png"
-dest_files=["res://.godot/imported/plant-small.png-cce923198f14bb652cf060a5c6d1a2d8.ctex"]
+source_file="res://assets/environment/props/plant-small.png"
+dest_files=["res://.godot/imported/plant-small.png-4b5e3c5ee9c8d7f7a137ac9b97834331.ctex"]
 
 [params]
 

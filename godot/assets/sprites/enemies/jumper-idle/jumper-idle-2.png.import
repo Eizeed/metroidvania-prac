@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://y4om1gkxp1kp"
-path="res://.godot/imported/jumper-idle-2.png-f75dd9215fbc77985aa7166f11456da5.ctex"
+path="res://.godot/imported/jumper-idle-2.png-2d5b9b82c38671b1fe1bfd8894e6e8ff.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Packs/warped-Caves/PNG/sprites/enemies/jumper-idle/jumper-idle-2.png"
-dest_files=["res://.godot/imported/jumper-idle-2.png-f75dd9215fbc77985aa7166f11456da5.ctex"]
+source_file="res://assets/sprites/enemies/jumper-idle/jumper-idle-2.png"
+dest_files=["res://.godot/imported/jumper-idle-2.png-2d5b9b82c38671b1fe1bfd8894e6e8ff.ctex"]
 
 [params]
 

@@ -1,12 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://bjra7hpal61j0"]
+[gd_scene load_steps=8 format=3 uid="uid://bjra7hpal61j0"]
 
-[ext_resource type="Texture2D" uid="uid://d3t0ejidyuwy3" path="res://assets/Packs/warped-Caves/PNG/environment/layers/tilesets.png" id="1_h8fnj"]
-[ext_resource type="Texture2D" uid="uid://bu4dxgwypli0l" path="res://assets/Packs/warped-Caves/PNG/environment/layers/props.png" id="2_l2wjq"]
+[ext_resource type="Texture2D" uid="uid://d3t0ejidyuwy3" path="res://assets/environment/layers/tilesets.png" id="2_l2wjq"]
 [ext_resource type="PackedScene" uid="uid://c5cx2xxpmot6q" path="res://player/player.tscn" id="2_n8t0r"]
-[ext_resource type="Texture2D" uid="uid://b1g4t5h6ak7r3" path="res://assets/Packs/warped-Caves/PNG/environment/layers/walls.png" id="3_31625"]
+[ext_resource type="Texture2D" uid="uid://b1g4t5h6ak7r3" path="res://assets/environment/layers/walls.png" id="3_31625"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5cp8n"]
-texture = ExtResource("1_h8fnj")
+texture = ExtResource("2_l2wjq")
 2:1/0 = 0
 2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, -8, -4.25, -1.625, -8, 8, -8, 8, 8)
 3:1/0 = 0

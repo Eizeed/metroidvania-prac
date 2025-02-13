@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dibmjqurstlly"
-path="res://.godot/imported/player-run-5.png-484967f0c7af3cd5ff0f182eb258e1a8.ctex"
+path="res://.godot/imported/player-run-5.png-b4be63e2f75a082b352c2badf140540a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Packs/warped-Caves/PNG/sprites/player/player-run/player-run-5.png"
-dest_files=["res://.godot/imported/player-run-5.png-484967f0c7af3cd5ff0f182eb258e1a8.ctex"]
+source_file="res://assets/sprites/player/player-run/player-run-5.png"
+dest_files=["res://.godot/imported/player-run-5.png-b4be63e2f75a082b352c2badf140540a.ctex"]
 
 [params]
 
