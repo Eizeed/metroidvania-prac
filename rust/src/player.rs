@@ -1,20 +1,21 @@
-use std::ops::Neg;
-
 use godot::{
-    classes::{AnimatedSprite2D, CharacterBody2D, ICharacterBody2D, Marker2D, ProjectSettings},
+    classes::{
+        AnimatedSprite2D, AnimationPlayer, CharacterBody2D, ICharacterBody2D, Marker2D, PhysicsBody2D, ProjectSettings
+    },
     obj::{NewGd, WithBaseField},
     prelude::*,
 };
 
-use crate::bullet;
+use crate::{bullet, enemy::{crab::Crab, dino::Dino}, health_manager::HealthManager, player_death::{self, PlayerDeath}};
 
 #[derive(GodotClass)]
 #[class(base=CharacterBody2D)]
-struct Player {
+pub struct Player {
     state: State,
     is_jump: bool,
 
     bullet_scene: Gd<PackedScene>,
+    player_death_scene: Gd<PackedScene>,
 
     #[export]
     speed: f32,
@@ -29,6 +30,7 @@ struct Player {
     #[export]
     slow_down_speed: f32,
 
+
     base: Base<CharacterBody2D>,
 }
 
@@ -42,6 +44,50 @@ enum State {
 }
 
 #[godot_api]
+impl Player {
+    #[func]
+    fn on_body_entered(&mut self, body: Gd<Node>) {
+        if body.is_in_group("Enemy") {
+
+            let damage_amount = {
+                let class_name = body.get_class();
+                match class_name.to_string().as_str() {
+                    "Crab" => body.cast::<Crab>().bind().get_damage_amount(),
+                    "Dino" => body.cast::<Dino>().bind().get_damage_amount(),
+                    _ => unreachable!("Unexisting classname for Enemy group")
+                }
+            };
+
+            let mut health_manager = self
+                .base()
+                .get_tree()
+                .unwrap()
+                .get_root()
+                .unwrap()
+                .get_node_as::<HealthManager>("GlobalHealthManager");
+
+            health_manager.bind_mut().decrease_health(damage_amount);
+
+            let mut hit_animation_player = self.base().get_node_as::<AnimationPlayer>("HitAnimationPlayer");
+            hit_animation_player.set_current_animation("hit");
+            hit_animation_player.play();
+
+            let current_health = health_manager.bind().get_current_health();
+            if current_health == 0 {
+                self.player_death();
+            }
+        }
+    }
+
+    fn player_death(&mut self) {
+        let mut player_death_instance = self.player_death_scene.instantiate_as::<PlayerDeath>();
+        player_death_instance.set_global_position(self.base().get_global_position());
+        self.base().get_parent().unwrap().add_child(&player_death_instance);
+        self.base_mut().queue_free();
+    }
+}
+
+#[godot_api]
 impl ICharacterBody2D for Player {
     fn init(base: Base<Self::Base>) -> Self {
         Self {
@@ -49,6 +95,7 @@ impl ICharacterBody2D for Player {
             is_jump: false,
 
             bullet_scene: PackedScene::new_gd(),
+            player_death_scene: PackedScene::new_gd(),
 
             speed: 1000.0,
             jump_velocity: -400.0,
@@ -63,6 +110,7 @@ impl ICharacterBody2D for Player {
 
     fn ready(&mut self) {
         self.bullet_scene = load("res://player/bullet.tscn");
+        self.player_death_scene = load("res://player/player_death.tscn");
     }
 
     fn physics_process(&mut self, delta: f64) {

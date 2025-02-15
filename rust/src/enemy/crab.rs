@@ -1,12 +1,14 @@
 use godot::{
-    classes::{AnimatedSprite2D, CharacterBody2D, ICharacterBody2D, Marker2D, ProjectSettings, Timer},
-    obj::WithBaseField,
+    classes::{AnimatedSprite2D, Area2D, CharacterBody2D, ICharacterBody2D, Marker2D, ProjectSettings, Timer},
+    obj::{NewGd, WithBaseField},
     prelude::*,
 };
 
+use crate::{bullet::Bullet, enemy_death};
+
 #[derive(GodotClass)]
 #[class(base=CharacterBody2D)]
-struct Enemy {
+pub struct Crab {
     state: State,
     can_walk: bool,
 
@@ -16,9 +18,15 @@ struct Enemy {
     current_point: Vector2,
 
     #[export]
+    health_amount: i32,
+    #[export]
+    damage_amount: i32,
+    #[export]
     speed: f32,
     #[export]
     wait_time: f64,
+
+    enemy_death_scene: Gd<PackedScene>,
 
     base: Base<CharacterBody2D>,
 }
@@ -29,17 +37,36 @@ enum State {
 }
 
 #[godot_api]
-impl Enemy {
+impl Crab {
     #[func]
     fn on_timer_timeout(&mut self) {
         self.can_walk = true;
     }
+
+    #[func]
+    fn on_area_entered(&mut self, area: Gd<Area2D>) {
+        let node = area.get_parent().unwrap();
+        if node.has_method("get_damage_amount") {
+            let bullet = node.cast::<Bullet>();
+            self.health_amount -= bullet.bind().get_damage_amount();
+            godot_print!("HP {}", self.get_health_amount());
+            if self.health_amount <= 0 {
+                let mut enemy_death_instance = self.enemy_death_scene.instantiate_as::<enemy_death::EnemyDeath>();
+                enemy_death_instance.set_global_position(self.base().get_global_position());
+                self.base().get_parent().unwrap().add_child(&enemy_death_instance);
+                self.base_mut().queue_free();
+            }
+        }
+        godot_print!("Entered hurtbox");
+    }
 }
 
 #[godot_api]
-impl ICharacterBody2D for Enemy {
+impl ICharacterBody2D for Crab {
     fn init(base: Base<Self::Base>) -> Self {
         Self {
+            health_amount: 3,
+            damage_amount: 1,
             state: State::Idle,
             can_walk: false,
             direction: Vector2::LEFT,
@@ -48,11 +75,14 @@ impl ICharacterBody2D for Enemy {
             current_point: Vector2::default(),
             speed: 1500.0,
             wait_time: 3.0,
+            enemy_death_scene: PackedScene::new_gd(),
             base,
         }
     }
 
     fn ready(&mut self) {
+        self.enemy_death_scene = load("res://enemies/enemy_death.tscn");
+
         let points = self
             .base()
             .get_node_as::<Node2D>("PatrolPoints")
