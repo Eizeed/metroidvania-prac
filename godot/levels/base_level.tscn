@@ -1,5 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://bjra7hpal61j0"]
+[gd_scene load_steps=9 format=3 uid="uid://bjra7hpal61j0"]
 
+[ext_resource type="PackedScene" uid="uid://2tgocjdedysh" path="res://ui/game_screen.tscn" id="1_dq6mw"]
 [ext_resource type="Texture2D" uid="uid://d3t0ejidyuwy3" path="res://assets/environment/layers/tilesets.png" id="2_l2wjq"]
 [ext_resource type="PackedScene" uid="uid://c5cx2xxpmot6q" path="res://player/player.tscn" id="2_n8t0r"]
 [ext_resource type="Texture2D" uid="uid://b1g4t5h6ak7r3" path="res://assets/environment/layers/walls.png" id="3_31625"]
@@ -272,6 +273,17 @@ sources/2 = SubResource("TileSetAtlasSource_wl0vr")
 
 [node name="BaseLevel" type="Level"]
 
+[node name="GameScreen" parent="." instance=ExtResource("1_dq6mw")]
+
+[node name="PlayerCamera2D" type="PlayerCamera" parent="."]
+position = Vector2(75, -226.365)
+limit_left = 0
+limit_top = -925
+limit_right = 1650
+limit_bottom = 0
+limit_smoothed = true
+editor_draw_limits = true
+
 [node name="Bacground" type="TileMapLayer" parent="."]
 z_index = -1
 tile_set = SubResource("TileSet_rwyqi")
@@ -285,6 +297,3 @@ tile_set = SubResource("TileSet_rwyqi")
 
 [node name="Player" parent="." instance=ExtResource("2_n8t0r")]
 position = Vector2(75, -186)
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2(0, -40.365)

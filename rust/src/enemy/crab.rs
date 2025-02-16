@@ -4,7 +4,7 @@ use godot::{
     prelude::*,
 };
 
-use crate::{bullet::Bullet, enemy_death};
+use crate::{bullet::Bullet, enemy::enemy_death::EnemyDeath};
 
 #[derive(GodotClass)]
 #[class(base=CharacterBody2D)]
@@ -51,7 +51,7 @@ impl Crab {
             self.health_amount -= bullet.bind().get_damage_amount();
             godot_print!("HP {}", self.get_health_amount());
             if self.health_amount <= 0 {
-                let mut enemy_death_instance = self.enemy_death_scene.instantiate_as::<enemy_death::EnemyDeath>();
+                let mut enemy_death_instance = self.enemy_death_scene.instantiate_as::<EnemyDeath>();
                 enemy_death_instance.set_global_position(self.base().get_global_position());
                 self.base().get_parent().unwrap().add_child(&enemy_death_instance);
                 self.base_mut().queue_free();

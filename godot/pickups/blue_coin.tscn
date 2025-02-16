@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=3 uid="uid://cij4yfkcsp5dj"]
+
+[ext_resource type="Texture2D" uid="uid://dlh4eub4hmlm1" path="res://assets/Tiles/tile_0151.png" id="1_fvpjj"]
+[ext_resource type="Texture2D" uid="uid://fy0c4o1dslmd" path="res://assets/Tiles/tile_0152.png" id="2_fi3wd"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_arjou"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_fvpjj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_fi3wd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_x6y8o"]
+radius = 6.0
+
+[node name="BlueCoin" type="BlueCoin"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_arjou")
+frame_progress = 0.832273
+
+[node name="PickupBox" type="Area2D" parent="."]
+position = Vector2(2, 0)
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickupBox"]
+position = Vector2(-2, 0)
+shape = SubResource("CircleShape2D_x6y8o")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -19.0
+offset_top = -12.0
+offset_right = 21.0
+offset_bottom = 11.0
+text = "1"
+horizontal_alignment = 1
+
+[connection signal="body_entered" from="PickupBox" to="." method="on_pickup_box_entered"]

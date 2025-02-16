@@ -2,7 +2,7 @@ use godot::prelude::*;
 
 #[derive(GodotClass)]
 #[class(base=Node2D)]
-struct Level {
+pub struct Level {
     base: Base<Node2D>
 }
 

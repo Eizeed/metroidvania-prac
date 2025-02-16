@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://plbhiruarfsr"]
+
+[ext_resource type="Texture2D" uid="uid://882togcyttau" path="res://assets/Tiles/tile_0044.png" id="1_bu8hc"]
+
+[node name="HealthBar" type="HealthBar"]
+
+[node name="Heart1" type="Sprite2D" parent="."]
+position = Vector2(-2, -3)
+texture = ExtResource("1_bu8hc")
+centered = false
+
+[node name="Heart2" type="Sprite2D" parent="."]
+position = Vector2(14, -3)
+texture = ExtResource("1_bu8hc")
+centered = false
+
+[node name="Heart3" type="Sprite2D" parent="."]
+position = Vector2(30, -3)
+texture = ExtResource("1_bu8hc")
+centered = false

@@ -11,13 +11,15 @@ config_version=5
 [application]
 
 config/name="metroidvania"
-run/main_scene="res://levels/level_1.tscn"
+run/main_scene="res://ui/main_menu.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
-GlobalGameManager="*res://game_manager/game_manager.tscn"
+GlobalHealthManager="*res://scripts/health_manager.tscn"
+GlobalGameManager="*res://scripts/game_manager.tscn"
+GlobalCollectableManager="*res://scripts/collectable_manager.tscn"
 
 [display]
 
@@ -26,6 +28,11 @@ window/size/viewport_height=270
 window/size/window_width_override=1280
 window/size/window_height_override=720
 window/stretch/mode="viewport"
+
+[global_group]
+
+Player=""
+Enemy=""
 
 [input]
 
@@ -58,6 +65,8 @@ shoot={
 
 2d_physics/layer_1="GROUND"
 2d_physics/layer_2="PLAYER"
+2d_physics/layer_3="ENEMY"
+2d_physics/layer_4="PICKUP"
 
 [rendering]
 

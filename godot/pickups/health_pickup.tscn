@@ -1,0 +1,80 @@
+[gd_scene load_steps=11 format=3 uid="uid://bw4t8255h8d6e"]
+
+[ext_resource type="Texture2D" uid="uid://b8mfsu5d24ssw" path="res://assets/spritesheets/Fx/power-up.png" id="1_pn8uy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cyyck"]
+atlas = ExtResource("1_pn8uy")
+region = Rect2(0, 0, 23, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xxuac"]
+atlas = ExtResource("1_pn8uy")
+region = Rect2(23, 0, 23, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1dndc"]
+atlas = ExtResource("1_pn8uy")
+region = Rect2(46, 0, 23, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3hgos"]
+atlas = ExtResource("1_pn8uy")
+region = Rect2(69, 0, 23, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_poxio"]
+atlas = ExtResource("1_pn8uy")
+region = Rect2(92, 0, 23, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f8ogv"]
+atlas = ExtResource("1_pn8uy")
+region = Rect2(115, 0, 23, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hyiuc"]
+atlas = ExtResource("1_pn8uy")
+region = Rect2(138, 0, 23, 21)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a8kdt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cyyck")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xxuac")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1dndc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3hgos")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_poxio")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f8ogv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hyiuc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_11d1v"]
+radius = 5.09902
+
+[node name="HealthPickup" type="HealthPickup"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_a8kdt")
+autoplay = "default"
+frame_progress = 0.463969
+
+[node name="PickUpBox" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickUpBox"]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_11d1v")
+
+[connection signal="body_entered" from="PickUpBox" to="." method="on_pickup_box_entered"]
